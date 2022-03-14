@@ -10,14 +10,16 @@ public class Calculator {
         // Get user input
         Scanner scanCalc = new Scanner(System.in);
 
-        System.out.println("Input the first number:");
+        System.out.println("Input the first number: ");
         num1=scanCalc.nextInt();
 
-        System.out.println("Input the operator:");
-        num1=scanCalc.nextLine();
+        scanCalc.nextLine();
+
+        System.out.println("Input the operator: ");
+        operator=scanCalc.nextLine();
         
-        System.out.println("Input the secondnumber:");
-        num1=scanCalc.nextInt();
+        System.out.println("Input the second number: ");
+        num2=scanCalc.nextInt();
 
         switch(operator){
             case"+":
@@ -35,19 +37,19 @@ public class Calculator {
     }
 
     public String add(int a, int b) {
-        return a+"+"+b+"="+(a+b);
+        return a+" + "+b+" = "+(a+b);
     }
 
     public String subtract(int a, int b) {
-        return a+"-"+b+"="+(a-b);
+        return a+" - "+b+" = "+(a-b);
     }
 
     public String multiply(int a, int b) {
-        return a+"x"+b+"="+(a*b);
+        return a+" x "+b+" = "+(a*b);
 
     }
 
     public String divide(int a, int b) {
-        return a+"/"+b+"="+((double)a/b);
+        return a+" / "+b+" = "+((double)a/b);
     }
 }

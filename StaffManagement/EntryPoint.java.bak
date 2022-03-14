@@ -11,19 +11,23 @@ public class EntryPoint{
 		//------------------------------------------------------------
 		
 		Scanner scn= new Scanner(System.in);
+		Employee emp=new Employee();
 		
 		//------------------------------------------------------------
 		
 		System.out.println("Please input the employee's first name: ");
 		
 		name1=scn.nextLine();
-	
+		
+		emp.setFirstName(name1);
+		
 		
 		
 		System.out.println("Please input the employee's last name: ");
 		
 		name2=scn.nextLine();
 		
+		emp.setLastName(name2);
 		
 		
 		
@@ -31,6 +35,7 @@ public class EntryPoint{
 		
 		age=scn.nextInt();
 		
+		emp.setAge(age);
 		
 		
 		
@@ -38,13 +43,11 @@ public class EntryPoint{
 		
 		monthlySalary=scn.nextDouble();
 		
-		//------------------------------------------------------------
-		
-		Employee emp=new Employee(name1,name2,age,monthlySalary);
+		emp.setMonthlySalary(monthlySalary);
 		
 		//------------------------------------------------------------
 		
-		System.out.println(emp);
+		System.out.println(emp.getFirstName()+" "+emp.getLastName()+", "+emp.getAge()+", "+emp.getMonthlySalary());
 		
 		
 	}
